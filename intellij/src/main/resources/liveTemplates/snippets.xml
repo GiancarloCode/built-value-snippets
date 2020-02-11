@@ -1,0 +1,199 @@
+<templateSet group="Built Value">
+    <template name="bvh"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;import 'package:built_value/serializer.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;$todo$"
+              description="Built Value Header" toReformat="false" toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: create the built value&quot;"
+                  alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvuf" value="(b) =&gt; b&#10;  .." description="Built Value Updates Function" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvt"
+              value="abstract class $ClassName$ implements Built&lt;$ClassName$, $ClassName$Builder&gt; {&#10;  $todo$&#10;  &#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder) updates]) = _$$$ClassName$;&#10;}"
+              description="Built Value Type" toReformat="false" toShortenFQNames="true">
+        <variable name="ClassName" expression="" defaultValue="&quot;ClassName&quot;" alwaysStopAt="true"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtf"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;abstract class $ClassName$ implements Built&lt;$ClassName$, $ClassName$Builder&gt; {&#10;  $todo$&#10;  &#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder) updates]) = _$$$ClassName$;&#10;}"
+              description="Built Value Type File whose name corresponds to the file name" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="false"/>
+        <variable name="ClassName" expression="capitalize(camelCase(fileNameWithoutExtension))" defaultValue=""
+                  alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvts"
+              value="abstract class $ClassName$ implements Built&lt;$ClassName$, $ClassName$Builder&gt; {&#10;  $todo$&#10;&#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder) updates]) = _$$$ClassName$;&#10;&#10;  Map&lt;String, dynamic&gt; toMap() {&#10;    return serializers.serializeWith($ClassName$.serializer, this);&#10;  }&#10;&#10;  static $ClassName$ fromMap(Map&lt;String, dynamic&gt; map) {&#10;    return serializers.deserializeWith($ClassName$.serializer, map);&#10;  }&#10;&#10;  static Serializer&lt;$ClassName$&gt; get serializer =&gt; _$$$className$Serializer;&#10;}"
+              description="Built Value Type Serializable" toReformat="false" toShortenFQNames="true">
+        <variable name="ClassName" expression="" defaultValue="&quot;ClassName&quot;" alwaysStopAt="true"/>
+        <variable name="className" expression="decapitalize(ClassName)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvs"
+              value="import 'package:built_value/serializer.dart';&#10;import 'package:built_value/standard_json_plugin.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;@SerializersFor([&#10;  $todo$&#10;])&#10;final Serializers serializers = &#10;    (_$serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();"
+              description="Built Value Serializers" toReformat="false" toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression=""
+                  defaultValue="&quot;// TODO: add the built values that require serialization&quot;"
+                  alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtsf"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;import 'package:built_value/serializer.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;abstract class $ClassName$ implements Built&lt;$ClassName$, $ClassName$Builder&gt; {&#10;  $todo$&#10;&#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder) updates]) = _$$$ClassName$;&#10;&#10;  Map&lt;String, dynamic&gt; toMap() {&#10;    return serializers.serializeWith($ClassName$.serializer, this);&#10;  }&#10;&#10;  static $ClassName$ fromMap(Map&lt;String, dynamic&gt; map) {&#10;    return serializers.deserializeWith($ClassName$.serializer, map);&#10;  }&#10;&#10;  static Serializer&lt;$ClassName$&gt; get serializer =&gt; _$$$className$Serializer;&#10;}"
+              description="Built Value Type Serializable File whose name corresponds to the file name"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="false"/>
+        <variable name="ClassName" expression="capitalize(camelCase(fileNameWithoutExtension))" defaultValue=""
+                  alwaysStopAt="false"/>
+        <variable name="className" expression="decapitalize(ClassName)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtg"
+              value="abstract class $ClassName$&lt;$T$&gt; implements Built&lt;$ClassName$&lt;$T$&gt;, $ClassName$Builder&lt;$T$&gt;&gt; {&#10;  $todo$&#10;  &#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder&lt;$T$&gt;) updates]) = _$$$ClassName$&lt;$T$&gt;;&#10;}"
+              description="Built Value Type Generic" toReformat="false" toShortenFQNames="true">
+        <variable name="ClassName" expression="" defaultValue="&quot;ClassName&quot;" alwaysStopAt="true"/>
+        <variable name="T" expression="" defaultValue="&quot;T&quot;" alwaysStopAt="true"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtgf"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;abstract class $ClassName$&lt;$T$&gt; implements Built&lt;$ClassName$&lt;$T$&gt;, $ClassName$Builder&lt;$T$&gt;&gt; {&#10;  $todo$&#10;  &#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder&lt;$T$&gt;) updates]) = _$$$ClassName$&lt;$T$&gt;;&#10;}"
+              description="Built Value Type Generic File whose name corresponds to the file name" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="false"/>
+        <variable name="ClassName" expression="capitalize(camelCase(fileNameWithoutExtension))" defaultValue=""
+                  alwaysStopAt="false"/>
+        <variable name="T" expression="" defaultValue="&quot;T&quot;" alwaysStopAt="true"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtgs"
+              value="abstract class $ClassName$&lt;$T$&gt; implements Built&lt;$ClassName$&lt;$T$&gt;, $ClassName$Builder&lt;$T$&gt;&gt; {&#10;  $todo$&#10;&#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder&lt;$T$&gt;) updates]) = _$$$ClassName$&lt;$T$&gt;;&#10;&#10;  Map&lt;String, dynamic&gt; toMap() {&#10;    return serializers.serializeWith($ClassName$.serializer, this);&#10;  }&#10;&#10;  static $ClassName$ fromMap(Map&lt;String, dynamic&gt; map) {&#10;    return serializers.deserializeWith($ClassName$.serializer, map);&#10;  }&#10;&#10;  static Serializer&lt;$ClassName$&gt; get serializer =&gt; _$$$className$Serializer;&#10;}"
+              description="Built Value Type Generic Serializable" toReformat="false" toShortenFQNames="true">
+        <variable name="ClassName" expression="" defaultValue="&quot;ClassName&quot;" alwaysStopAt="true"/>
+        <variable name="T" expression="" defaultValue="&quot;T&quot;" alwaysStopAt="true"/>
+        <variable name="className" expression="decapitalize(ClassName)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvtgsf"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;import 'package:built_value/serializer.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;abstract class $ClassName$&lt;$T$&gt; implements Built&lt;$ClassName$&lt;$T$&gt;, $ClassName$Builder&lt;$T$&gt;&gt; {&#10;  $todo$&#10;&#10;  $ClassName$._();&#10;  factory $ClassName$([void Function($ClassName$Builder&lt;$T$&gt;) updates]) = _$$$ClassName$&lt;$T$&gt;;&#10;&#10;  Map&lt;String, dynamic&gt; toMap() {&#10;    return serializers.serializeWith($ClassName$.serializer, this);&#10;  }&#10;&#10;  static $ClassName$ fromMap(Map&lt;String, dynamic&gt; map) {&#10;    return serializers.deserializeWith($ClassName$.serializer, map);&#10;  }&#10;&#10;  static Serializer&lt;$ClassName$&gt; get serializer =&gt; _$$$className$Serializer;&#10;}"
+              description="Built Value Type Generic Serializable File whose name corresponds to the file name"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="false"/>
+        <variable name="ClassName" expression="capitalize(camelCase(fileNameWithoutExtension))" defaultValue=""
+                  alwaysStopAt="false"/>
+        <variable name="T" expression="" defaultValue="&quot;T&quot;" alwaysStopAt="true"/>
+        <variable name="className" expression="decapitalize(ClassName)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="todo" expression="" defaultValue="&quot;// TODO: add the fields&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bve"
+              value="class $EnumName$ extends EnumClass {&#10;  static const $EnumName$ $constantName$ = _$$$constantName$;&#10;&#10;  const $EnumName$._(String name) : super(name);&#10;&#10;  static BuiltSet&lt;$EnumName$&gt; get values =&gt; _$$$enumName$Values;&#10;  static $EnumName$ valueOf(String name) =&gt; _$$$enumName$ValueOf(name);&#10;}"
+              description="Built Value Enum" toReformat="false" toShortenFQNames="true">
+        <variable name="EnumName" expression="" defaultValue="&quot;EnumName&quot;" alwaysStopAt="true"/>
+        <variable name="constantName" expression="" defaultValue="&quot;constantName&quot;" alwaysStopAt="true"/>
+        <variable name="enumName" expression="decapitalize(EnumName)" defaultValue="" alwaysStopAt="false"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvef"
+              value="import 'package:built_collection/built_collection.dart';&#10;import 'package:built_value/built_value.dart';&#10;&#10;part '$file_name$.g.dart';&#10;&#10;class $EnumName$ extends EnumClass {&#10;  static const $EnumName$ $constantName$ = _$$$constantName$;&#10;&#10;  const $EnumName$._(String name) : super(name);&#10;&#10;  static BuiltSet&lt;$EnumName$&gt; get values =&gt; _$$$enumName$Values;&#10;  static $EnumName$ valueOf(String name) =&gt; _$$$enumName$ValueOf(name);&#10;}"
+              description="Built Value Enum File whose name corresponds to the file name" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="file_name" expression="fileNameWithoutExtension" defaultValue="" alwaysStopAt="false"/>
+        <variable name="EnumName" expression="capitalize(camelCase(file_name))" defaultValue="" alwaysStopAt="false"/>
+        <variable name="constantName" expression="" defaultValue="&quot;constantName&quot;" alwaysStopAt="true"/>
+        <variable name="enumName" expression="decapitalize(EnumName)" defaultValue="" alwaysStopAt="false"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvec" value="static const $EnumClassName$ $constantName$ = _$$$constantName$;"
+              description="Built Value Enum Constant" toReformat="false" toShortenFQNames="true">
+        <variable name="EnumClassName" expression="" defaultValue="&quot;EnumClassName&quot;" alwaysStopAt="true"/>
+        <variable name="constantName" expression="" defaultValue="&quot;constantName&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="bvecf" value="static const $EnumClassName$ $constantName$ = _$$$constantName$;"
+              description="Built Value Enum Constant File whose type corresponds to the file name" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="EnumClassName" expression="capitalize(camelCase(fileNameWithoutExtension))" defaultValue=""
+                  alwaysStopAt="false"/>
+        <variable name="constantName" expression="" defaultValue="&quot;constantName&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@n" value="@nullable" description="@nullable" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@m" value="@memoized" description="@memoized" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@bv" value="@BuiltValue($params$)" description="@BuiltValue" toReformat="false"
+              toShortenFQNames="true">
+        <variable name="params" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@bvf" value="@BuiltValueField(wireName: '$wireName$')" description="BuiltValueField"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="wireName" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@bve" value="@BuiltValueEnum(wireName: '$wireName$')" description="@BuiltValueEnum"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="wireName" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+    <template name="@bvec" value="@BuiltValueEnumConst(wireName: '$wireName$')" description="@BuiltValueEnumConst"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="wireName" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="DART" value="true"/>
+        </context>
+    </template>
+</templateSet>

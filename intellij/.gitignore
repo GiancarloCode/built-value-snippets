@@ -1,0 +1,17 @@
+.dart_tool/
+.DS_Store
+.gradle/
+.idea/
+.packages
+.pub/
+.sandbox/
+.vscode/
+artifacts/
+build/
+built-value-snippets.jar
+built-value-snippets.zip
+lib/*.jar
+out/
+packages
+pubspec.lock
+releases/

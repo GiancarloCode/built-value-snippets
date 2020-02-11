@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.giancarlocode.built-value-snippets</id>
+    <name>Built Value Snippets</name>
+    <vendor email="GiancarloCode@gmail.com">GiancarloCode</vendor>
+    <version>1.0.0</version>
+
+    <description><![CDATA[
+      <p>This plugin contains code snippets for built_value package.</p><br>
+      <p><a href="https://github.com/GiancarloCode/built-value-snippets"
+        target="_blank">List of snippets and Repository</a>.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <strong>v1.0.0</strong> <br/>
+      <li>Initial release of Built Value Snippets</li>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="com.giancarlocode.built.value.snippets.TemplateProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
