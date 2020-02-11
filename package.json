@@ -1,0 +1,43 @@
+{
+    "name": "built-value-snippets",
+    "displayName": "Built Value Snippets",
+    "description": "Snippets for built_value package",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "icon": "images/icon.png",
+    "author": {
+        "name": "GiancarloCode",
+        "email": "GiancarloCode@gmail.com"
+    },
+    "publisher": "giancarlocode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GiancarloCode/vscode-built-value-snippets"
+    },
+    "bugs": {
+        "url": "https://github.com/GiancarloCode/vscode-built-value-snippets/issues"
+    },
+    "categories": [
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "dart",
+        "flutter",
+        "built value",
+        "built_value",
+        "built_collection",
+        "built collection"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "dart",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "license": "MIT"
+}
