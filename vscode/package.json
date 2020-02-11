@@ -14,10 +14,10 @@
     "publisher": "giancarlocode",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GiancarloCode/vscode-built-value-snippets"
+        "url": "https://github.com/GiancarloCode/built-value-snippets"
     },
     "bugs": {
-        "url": "https://github.com/GiancarloCode/vscode-built-value-snippets/issues"
+        "url": "https://github.com/GiancarloCode/built-value-snippets/issues"
     },
     "categories": [
         "Snippets",
