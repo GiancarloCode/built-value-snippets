@@ -2,17 +2,26 @@
     <id>com.giancarlocode.built-value-snippets</id>
     <name>Built Value Snippets</name>
     <vendor email="GiancarloCode@gmail.com">GiancarloCode</vendor>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <description><![CDATA[
-      <p>This plugin contains code snippets for built_value package.</p><br>
+      <p>This plugin contains code snippets for <a href="https://github.com/google/built_value.dart"
+        target="_blank">built_value</a> Dart package.</p><br>
       <p><a href="https://github.com/GiancarloCode/built-value-snippets"
         target="_blank">List of snippets and Repository</a>.</p>
     ]]></description>
 
     <change-notes><![CDATA[
+      <strong>v1.1.0</strong> <br/>
+      <ul>
+        <li>Added Built Value Enum Serializable snippet</li>
+        <li>Added Built Value Enum Serializable File snippet</li>
+        <li>Fixed Built Value Serializers snippet</li>
+      </ul>
       <strong>v1.0.0</strong> <br/>
-      <li>Initial release of Built Value Snippets</li>
+      <ul>
+        <li>Initial release of Built Value Snippets</li>
+      </ul>
     ]]>
     </change-notes>
 
