@@ -8,7 +8,7 @@
             "",
             "part '$TM_FILENAME_BASE.g.dart';",
             "",
-            "${1:// TODO: create the built value}"
+            "${1}"
         ],
         "description": "Built Value Header"
     },
@@ -23,10 +23,10 @@
         "prefix": "bvt",
         "body": [
             "abstract class ${1:ClassName} implements Built<${1}, ${1}Builder> {",
-            "  ${2:// TODO: add the fields}",
+            "  ${2}",
             "",
             "  ${1}._();",
-            "  factory ${1}([void Function(${1}$Builder) updates]) = _$${1};",
+            "  factory ${1}([void Function(${1}Builder) updates]) = _$${1};",
             "}"
         ],
         "description": "Built Value Type"
@@ -40,10 +40,10 @@
             "part '$TM_FILENAME_BASE.g.dart';",
             "",
             "abstract class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} implements Built<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}, ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder> {",
-            "  ${2:// TODO: add the fields}",
+            "  ${2}",
             "",
             "  ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._();",
-            "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}$Builder) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/};",
+            "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/};",
             "}"
         ],
         "description": "Built Value Type File whose name corresponds to the file name"
@@ -52,7 +52,7 @@
         "prefix": "bvts",
         "body": [
             "abstract class ${1:ClassName} implements Built<${1}, ${1}Builder> {",
-            "  ${2:// TODO: add the fields}",
+            "  ${2}",
             "",
             "  ${1}._();",
             "  factory ${1}([void Function(${1}Builder) updates]) = _$${1};",
@@ -80,7 +80,7 @@
             "part '$TM_FILENAME_BASE.g.dart';",
             "",
             "abstract class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} implements Built<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}, ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder> {",
-            "  ${2:// TODO: add the fields}",
+            "  ${2}",
             "",
             "  ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._();",
             "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/};",
@@ -102,10 +102,10 @@
         "prefix": "bvtg",
         "body": [
             "abstract class ${1:ClassName}<${2:T}> implements Built<${1}<${2}>, ${1}Builder<${2}>> {",
-            "  ${3:// TODO: add the fields}",
+            "  ${3}",
             "",
             "  ${1}._();",
-            "  factory ${1}([void Function(${1}$Builder<${2}>) updates]) = _$${1}<${2}>;",
+            "  factory ${1}([void Function(${1}Builder<${2}>) updates]) = _$${1}<${2}>;",
             "}"
         ],
         "description": "Built Value Type Generic"
@@ -119,10 +119,10 @@
             "part '$TM_FILENAME_BASE.g.dart';",
             "",
             "abstract class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2:T}> implements Built<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2}>, ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder<${2}>> {",
-            "  ${3:// TODO: add the fields}",
+            "  ${3}",
             "",
             "  ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._();",
-            "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}$Builder<${2}>) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2}>;",
+            "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder<${2}>) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2}>;",
             "}"
         ],
         "description": "Built Value Type Generic File whose name corresponds to the file name"
@@ -131,7 +131,7 @@
         "prefix": "bvtgs",
         "body": [
             "abstract class ${1:ClassName}<${2:T}> implements Built<${1}<${2}>, ${1}Builder<${2}>> {",
-            "  ${3:// TODO: add the fields}",
+            "  ${3}",
             "",
             "  ${1}._();",
             "  factory ${1}([void Function(${1}Builder<${2}>) updates]) = _$${1}<${2}>;",
@@ -159,7 +159,7 @@
             "part '$TM_FILENAME_BASE.g.dart';",
             "",
             "abstract class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2:T}> implements Built<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2}>, ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder<${2}>> {",
-            "  ${3:// TODO: add the fields}",
+            "  ${3}",
             "",
             "  ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._();",
             "  factory ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}([void Function(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}Builder<${2}>) updates]) = _$${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}<${2}>;",
@@ -182,6 +182,7 @@
         "body": [
             "class ${1:EnumName} extends EnumClass {",
             "  static const ${1} ${2:constantName} = _$${2:constantName};",
+            "  ${3}",
             "",
             "  const ${1}._(String name) : super(name);",
             "",
@@ -201,6 +202,7 @@
             "",
             "class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} extends EnumClass {",
             "  static const ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} ${1:constantName} = _$${1:constantName};",
+            "  ${2}",
             "",
             "  const ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._(String name) : super(name);",
             "  ",
@@ -209,6 +211,62 @@
             "}"
         ],
         "description": "Built Value Enum File whose name corresponds to the file name"
+    },
+    "Built Value Enum Serializable": {
+        "prefix": "bves",
+        "body": [
+            "class ${1:EnumName} extends EnumClass {",
+            "  static const ${1} ${2:constantName} = _$${2:constantName};",
+            "  ${3}",
+            "",
+            "  const ${1}._(String name) : super(name);",
+            "",
+            "  static BuiltSet<${1}> get values => _\\$${1/(^[A-z]{1})/${1:/downcase}/}Values;",
+            "  static ${1} valueOf(String name) => _\\$${1/(^[A-z]{1})/${1:/downcase}/}ValueOf(name);",
+            "",
+            "  String serialize() {",
+            "    return serializers.serializeWith(${1}.serializer, this);",
+            "  }",
+            "",
+            "  static ${1} deserialize(String string) {",
+            "    return serializers.deserializeWith(${1}.serializer, string);",
+            "  }",
+            "",
+            "  static Serializer<${1}> get serializer => _$${1/(^[A-z]{1})/${1:/downcase}/}Serializer;",
+            "}",
+        ],
+        "description": "Built Value Enum Serializable"
+    },
+    "Built Value Enum Serializable File": {
+        "prefix": "bvesf",
+        "body": [
+            "import 'package:built_collection/built_collection.dart';",
+            "import 'package:built_value/built_value.dart';",
+            "import 'package:built_value/serializer.dart';",
+            "",
+            "part '$TM_FILENAME_BASE.g.dart';",
+            "",
+            "class ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} extends EnumClass {",
+            "  static const ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} ${1:constantName} = _$${1:constantName};",
+            "  ${2}",
+            "",
+            "  const ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}._(String name) : super(name);",
+            "  ",
+            "  static BuiltSet<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}> get values => _\\$${TM_FILENAME_BASE/([a-z]*)_*([a-z]*)/$1${2:/capitalize}/g}Values;",
+            "  static ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} valueOf(String name) => _\\$${TM_FILENAME_BASE/([a-z]*)_*([a-z]*)/$1${2:/capitalize}/g}ValueOf(name);",
+            "",
+            "  String serialize() {",
+            "    return serializers.serializeWith(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}.serializer, this);",
+            "  }",
+            "",
+            "  static ${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/} deserialize(String string) {",
+            "    return serializers.deserializeWith(${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}.serializer, string);",
+            "  }",
+            "",
+            "  static Serializer<${TM_FILENAME_BASE/(.*)$/${1:/pascalcase}/}> get serializer => _$${TM_FILENAME_BASE/([a-z]*)_*([a-z]*)/$1${2:/capitalize}/g}Serializer;",
+            "}"
+        ],
+        "description": "Built Value Enum Serializable File whose name corresponds to the file name"
     },
     "Built Value Enum Constant": {
         "prefix": "bvec",
@@ -227,6 +285,7 @@
     "Built Value Serializers": {
         "prefix": "bvs",
         "body": [
+            "import 'package:built_collection/built_collection.dart';",
             "import 'package:built_value/serializer.dart';",
             "import 'package:built_value/standard_json_plugin.dart';",
             "",
