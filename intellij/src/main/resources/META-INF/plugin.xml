@@ -2,7 +2,7 @@
     <id>com.giancarlocode.built-value-snippets</id>
     <name>Built Value Snippets</name>
     <vendor email="GiancarloCode@gmail.com">GiancarloCode</vendor>
-    <version>1.1.0</version>
+    <version>1.1.0+1</version>
 
     <description><![CDATA[
       <p>This plugin contains code snippets for <a href="https://github.com/google/built_value.dart"
@@ -28,6 +28,8 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+
+    <idea-version since-build="145.0"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplatesProvider implementation="com.giancarlocode.built.value.snippets.TemplateProvider"/>
